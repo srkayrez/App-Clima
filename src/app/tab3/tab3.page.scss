@@ -1,0 +1,36 @@
+.logo{
+    width: 100px;
+    margin: 10px auto ; // vertical
+    display: block;
+   }
+
+   .center {
+    --ion-background-color: #28903a;
+    text-align: center;
+
+  //    // position: absolute;
+  //     left: 0;
+  //     right: 0;
+   top: 1%;
+  //     transform: translateY(-50%);
+  }
+.longitude
+{
+  padding-left: 0.1em;
+}
+#centralizar
+{
+  text-align: center;
+}
+p
+{
+  font-size: 20px;
+}
+.conteudo
+{
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body,html{overflow:hidden}

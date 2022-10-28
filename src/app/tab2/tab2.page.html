@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      INFORMAÇÕES
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="back-info ion-text-center">
+    <img class="logo" src="../../assets/icon/clima.png">
+  </div>
+
+  <div class="center">
+    <ion-spinner name="crescent" [hidden]="!carregando"></ion-spinner>
+  </div>
+
+  <div *ngIf="!carregando">
+
+    <ion-card>
+
+      <ion-card-header id="teste">
+        <ion-card-title>
+          <b>
+            <span class="material-symbols-outlined">
+              info
+            </span>
+            INFORMAÇÕES
+          </b>
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content id="teste">
+        <p>
+          <b>
+            Trabalho
+          </b>
+          relacionado a disciplina de Desenvolvimento de Sistemas Distribuidos
+        </p>
+        <br>
+        <ion-badge  color="primary">ALUNOS</ion-badge>
+        <br>
+        <p>
+          JOÃO VICTOR CAIRES - <b>D8755G-3</b>
+        </p>
+        <p>
+          GABRIEL EDUARDO JOIOSO - <b>N4560E-0</b>
+        </p>
+        <p>
+          WELLINGTON JUNIOR CHELES - <b>T8632H2</b>
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button href="tabs/tab3">
+      <ion-icon color="primary" name="partly-sunny-outline"></ion-icon>
+      <ion-label>Clima</ion-label>
+    </ion-tab-button>
+    <ion-tab-button href="">
+      <ion-icon color="primary" name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button href="tabs/tab2">
+      <ion-icon color="primary" name="alert-circle"></ion-icon>
+      <ion-label>Informações</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Weather now
+    </ion-title>
+  </ion-toolbar>
+
+<ion-content [fullscreen]="true">
+
+  <div class="container">
+
+  <div class="back">
+    <div class="back-info ion-text-center">
+      <img class="logo" src="../../assets//icon/clima.png">
+    </div>
+
+  </div>
+
+ <ion-card class="cardPrincipal">
+  <ion-list lines="full" class="cards">
+
+    <ion-card>
+      <ion-card-content>
+        <p>
+          <span class="material-symbols-outlined">
+            pin_drop
+          </span>
+          <b>
+            {{dados.data.city}} - {{dados.data.state}} - {{dados.data.country}}
+          </b>
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <p>
+          <b>
+            <span class="material-symbols-outlined">
+              humidity_mid
+            </span>
+              Umidade: {{dados.data.current.weather.hu}}%
+          </b>
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <p>
+          <span class="material-symbols-outlined">
+            device_thermostat
+          </span>
+            <b>
+              Temperatura: {{dados.data.current.weather.tp}} ºC
+            </b>
+          </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <p>
+          <span class="material-symbols-outlined">
+            air
+          </span>
+            <b>
+              Qualidade do Ar: {{dados.data.current.pollution.aqius}}
+            </b>
+          </p>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-list>
+</ion-card>
+
+</div>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed"
+onclick="window.open('https:/github.com/hugofsd/APS-OITAVO-SEMESTE')">
+  <ion-fab-button color="light" >
+    <ion-icon name="logo-github"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+</ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button href="tabs/tab3">
+      <ion-icon color="primary" name="partly-sunny-outline"></ion-icon>
+      <ion-label>Clima</ion-label>
+    </ion-tab-button>
+    <ion-tab-button href="">
+      <ion-icon color="primary" name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button href="tabs/tab2">
+      <ion-icon color="primary" name="alert-circle-outline"></ion-icon>
+      <ion-label>Informações</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+
